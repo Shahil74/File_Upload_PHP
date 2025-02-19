@@ -63,7 +63,8 @@ Edit `application/config/database.php` and update the database settings:
         'hostname' => 'localhost',
         'username' => 'root',  // Change if needed
         'password' => '',      // Change if needed
-        'database' => 'file_upload_db',
+        'database' => 'file_example',
         'dbdriver' => 'mysqli',
+);
     
 
