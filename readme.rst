@@ -20,3 +20,50 @@ Technologies Used
 - MySQL (Database)
 - HTML, CSS, JavaScript,Bootstrap (Frontend)
 
+##########################
+Installation & Setup
+##########################
+
+**************************
+1. Clone the Repository
+**************************
+git clone https://github.com/Shahil74/File_Upload_PHP.git
+cd File_Upload_PHP
+
+**************************
+2. Configure database
+**************************
+- Create a Database in MySql name file_example.
+- Import the database file present inside the database folder.
+ Database Structure
+=====================
+Create a table named *file* in MySQL:
+
+.. code-block:: sql
+
+    CREATE TABLE uploads (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      file_name VARCHAR(255) NOT NULL,
+      file_type VARCHAR(50) NOT NULL,
+      file_size FLOAT NOT NULL,
+      file_data LONGBLOB NOT NULL,
+      file_path VARCHAR(255) NOT NULL,
+      uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+
+Database Configuration
+======================
+Edit `application/config/database.php` and update the database settings:
+
+
+.. code-block:: php
+
+    $db['default'] = array(
+        'dsn'   => '',
+        'hostname' => 'localhost',
+        'username' => 'root',  // Change if needed
+        'password' => '',      // Change if needed
+        'database' => 'file_upload_db',
+        'dbdriver' => 'mysqli',
+    
+
